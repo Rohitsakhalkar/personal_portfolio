@@ -23,32 +23,39 @@ function projects(){
       console.error("Error fetching GitHub repos:", error);
     });
 }
-function like(){
-const toggleBtn = document.getElementById("likeToggle");
-const like = document.getElementById("heart-like");
-const unlike = document.getElementById("heart-unlike");
-let count = 0;
-const likeCounter = document.getElementById("likeCounter");
-toggleBtn.addEventListener("click", () => {
-  const isLiked = like.style.display === "inline";
 
-  if (isLiked) {
-    like.style.display = "none";
-    unlike.style.display = "inline";
-     count--;
-  } else {
-    like.style.display = "inline";
-    unlike.style.display = "none";
-   
-   count++;
-    const heartSVG = like.querySelector("svg");
-    heartSVG.classList.remove("pop");
-    void heartSVG.offsetWidth; // trigger reflow
-    heartSVG.classList.add("pop");
-  }
-  likeCounter.innerHTML=count;
-});
- likeCounter.innerHTML=count;
+let count = parseInt(localStorage.getItem("likeCount")) || 0;
+
+function like(){
+  const toggleBtn = document.getElementById("likeToggle");
+  const like = document.getElementById("heart-like");
+  const unlike = document.getElementById("heart-unlike");
+  const likeCounter = document.getElementById("likeCounter");
+
+  likeCounter.innerHTML = count;
+
+  toggleBtn.addEventListener("click", () => {
+    const isLiked = like.style.display === "inline";
+
+    if (isLiked) {
+      like.style.display = "none";
+      unlike.style.display = "inline";
+      count--;
+    } else {
+      like.style.display = "inline";
+      unlike.style.display = "none";
+      count++;
+      const heartSVG = like.querySelector("svg");
+      heartSVG.classList.remove("pop");
+      void heartSVG.offsetWidth;
+      heartSVG.classList.add("pop");
+    }
+
+    likeCounter.innerHTML = count;
+    localStorage.setItem("likeCount", count); // store updated count
+  });
 }
+
 like();
+
 projects();
