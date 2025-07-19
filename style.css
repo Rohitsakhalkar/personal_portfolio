@@ -209,6 +209,7 @@ body {
     transform: scale(1);
   }
 }
-h3 {
+h3 ,h2{
  text-align:center;
+ line-height:1.2rem;
 }
