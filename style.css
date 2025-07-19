@@ -10,14 +10,9 @@ body {
   line-height: 1.6;
   background-color: #f8f9fa;
   color: #1f2937;
-  padding: 20px;
+  padding:0;
+  margin: 0;
 }
-#container{
-  background-image: url("./brandLogo.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 #navigation {
   background-color: #1e293b;
   padding: 15px 0;
