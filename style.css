@@ -64,12 +64,12 @@ body {
 
 #infoContainer h1 {
   font-size: 2.5rem;
-  color: #111827;
+  color: #cfd7e8;
 }
 
 #infoContainer h2 {
   font-size: 1.5rem;
-  color: #4b5563;
+  color: #d2dbe7;
   margin-top: 10px;
 }
 
@@ -77,7 +77,7 @@ body {
   max-width: 600px;
   margin-top: 15px;
   font-size: 1rem;
-  color: #374151;
+  color: #b7bdc6;
 }
 
 /* ========== Footer / Contact ========== */
@@ -161,7 +161,7 @@ body {
 }
 
 .project-card {
-  background: #f8fafc;
+  background: #252627;
   padding: 1rem;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
