@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="navigation">
+       <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="about">About</a></li>
+            <li><a href="#project">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+       </ul>
+           <div class="like-icon" id="likeToggle">
+            <span id="heart-unlike">
+                <!-- Outline Heart -->
+                <svg class="heart" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#e0245e" viewBox="0 0 24 24" width="40" height="40">
+                <path d="M12.1 8.64l-.1.1-.11-.11C10.14 6.44 7.26 6.58 5.6 8.24 
+                    c-1.66 1.66-1.53 4.54.29 6.36l6.11 6.11 6.11-6.11 
+                    c1.82-1.82 1.95-4.7.29-6.36-1.66-1.66-4.54-1.8-6.3-.2z" 
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </span>
+
+            <span id="heart-like" style="display: none;">
+                <!-- Filled Heart -->
+                <svg class="heart pop" xmlns="http://www.w3.org/2000/svg" fill="#e0245e" viewBox="0 0 24 24" width="40" height="40">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
+                    2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 
+                    2.09C13.09 3.81 14.76 3 16.5 3 
+                    19.58 3 22 5.42 22 8.5c0 3.78-3.4 
+                    6.86-8.55 11.54L12 21.35z"/>
+                </svg>
+            </span>
+            <p id="likeCounter"></p>
+            </div>
+            
+    </header>
+
+    <section id="home">
+        <div id="imgContainer">
+           <img src="" id="dp" alt="profile photo of Rohit Sakhalkar">
+        </div>
+        <div id="infoContainer">
+             <h1 id="name">Rohit Sakhalkar</h1>
+             <h2 id="welcomeMessage">Hey there! Welcome to my portfolio.</h2>
+             <p id="intro">I'm a web developer who is passionate about building responsive and user-friendly 
+                websites. I love turning my ideas into clean, interactive web experiences. Currently diving
+                 deeper into the world of web development.
+             </p>
+        </div>
+    </section>
+    <section id="about">
+        <h2>About Me</h2>
+  <p>I'm <strong>Rohit Sakhalkar</strong>, a frontend developer building clean, responsive interfaces using HTML, CSS, and modern JavaScript frameworks…</p>
+
+  <div class="about-containers">
+    <div class="about-box">
+      <h3>Tech Stack</h3>
+      <div class="icon-grid">
+        <img src="https://cdn.simpleicons.org/html5" alt="HTML5 logo">
+        <img src="https://cdn.simpleicons.org/css3" alt="CSS3 logo">
+        <img src="https://cdn.simpleicons.org/javascript" alt="JavaScript logo">
+        <img src="https://cdn.simpleicons.org/firebase" alt="Firebase logo">
+      </div>
+    </div>
+    <div class="about-box">
+      <h3>Languages</h3>
+      <div class="icon-grid">
+        <img src="https://cdn.simpleicons.org/c" alt="C logo">
+        <img src="https://cdn.simpleicons.org/cplusplus" alt="C++ logo">
+        <img src="https://cdn.simpleicons.org/csharp" alt="C# logo">
+        <img src="https://cdn.simpleicons.org/python" alt="Python logo">
+      </div>
+    </div>
+    <div class="about-box">
+      <h3>Tools</h3>
+      <div class="icon-grid">
+        <img src="https://cdn.simpleicons.org/github" alt="GitHub logo">
+        <img src="https://cdn.simpleicons.org/vscode" alt="VS Code logo">
+        <img src="https://cdn.simpleicons.org/firebase" alt="Firebase logo">
+        <img src="https://cdn.simpleicons.org/chromevico"? alt="Chrome DevTools logo">
+      </div>
+    </div>
+  </div>
+    </section>
+    <section id="Projects">
+        <h2>My Projects</h2>
+  <div id="github-projects"></div>
+    </section>
+    <footer id="contact">
+           <h2>Contact Me</h2>
+  <p>Let’s build something amazing together! Reach out 👇</p>
+  <ul>
+    <li><a href="mailto:rohitsakhalkar@email.com">📧 Email</a></li>
+    <li><a href="https://github.com/Rohitsakhalkar">💻 GitHub</a></li>
+    <li><a href="https://linkedin.com/in/rohitsakhalkar">🔗 LinkedIn</a></li>
+  </ul>
+
+    </footer>
+    <script type="module" src="./index.js"></script>
+</body>
+</html>
