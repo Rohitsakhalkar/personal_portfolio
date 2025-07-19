@@ -21,6 +21,8 @@ body {
   margin-bottom: 30px;
   display:flex;
   flex-direction: row;
+  gap:4rem;
+  justify-content: center;
 }
 
 #navigation ul {
