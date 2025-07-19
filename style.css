@@ -12,8 +12,12 @@ body {
   color: #1f2937;
   padding: 20px;
 }
+#container{
+  background-image: url("./brandLogo.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-/* ========== Navigation ========== */
 #navigation {
   background-color: #1e293b;
   padding: 15px 0;
