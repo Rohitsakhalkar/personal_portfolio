@@ -209,3 +209,6 @@ body {
     transform: scale(1);
   }
 }
+h3 {
+ text-align:center;
+}
