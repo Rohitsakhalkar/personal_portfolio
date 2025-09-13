@@ -12,7 +12,9 @@ import {
   doc,
   getDoc,
   setDoc,
-  updateDoc
+  addDoc,
+  updateDoc,
+  collection
 } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
 
 // Firebase config
@@ -41,7 +43,7 @@ function projects() {
       const projectContainer = document.getElementById("github-projects");
       repos
         .filter(repo => !repo.fork)
-        .slice(0, 6)
+        .slice(0, 5)
         .forEach(repo => {
           const projectCard = document.createElement("div");
           projectCard.className = "project-card";
@@ -107,3 +109,50 @@ async function like() {
 // Call functions on page load
 projects();
 like();
+const submitForm = document.getElementById("btn_form").addEventListener("click",async (event)=>{
+  event.preventDefault();
+  const email=document.getElementById("email").value;
+  const feedback=document.getElementById("feedback").value;
+  try{
+  await addDoc(collection(db,"feedbacks"),{
+   email:email,
+   feedback:feedback,
+   timestamp:new Date()
+  });
+  alert("Form Submitted");
+}
+catch(error){
+ console.error("Error submitting feedback:",error);
+ alert("Fail to submit");
+}
+});
+
+const nav=document.getElementById("nav_container");
+nav.addEventListener("click",()=>{
+  
+ let existinglist = document.getElementById("wrapper");
+  if(existinglist){
+    nav.removeChild(existinglist);
+    return;
+  }
+  else{ 
+      const navBar=document.createElement("div");
+  navBar.id="wrapper";
+  navBar.innerHTML=` <ul id="navlist">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+       </ul>`;
+       nav.appendChild(navBar);
+  }
+});
+const navsvg=document.getElementById("navSvg");
+navsvg.addEventListener("click",()=>{
+  navsvg.classList.remove("animate");
+  void navsvg.offsetWidth;
+  setTimeout(()=>{
+ navsvg.classList.add("animate");
+  },0.1);
+  
+});
