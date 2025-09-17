@@ -251,6 +251,11 @@ body {
     transform: scale(1);
   }
 }
+.icon-flow{
+  overflow: hidden;
+  border: none ;
+  
+}
 h2{
   font-weight: bold;
 }
